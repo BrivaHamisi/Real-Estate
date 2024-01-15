@@ -18,22 +18,22 @@
     <!-- End fonts -->
 
     <!-- core:css -->
-    <link rel="stylesheet" href="../../../assets/vendors/core/core.css">
+    <link rel="stylesheet" href="{{asset('../../../assets/vendors/core/core.css')}}">
     <!-- endinject -->
 
     <!-- Plugin css for this page -->
     <!-- End plugin css for this page -->
 
     <!-- inject:css -->
-    <link rel="stylesheet" href="../../../assets/fonts/feather-font/css/iconfont.css">
-    <link rel="stylesheet" href="../../../assets/vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="{{asset('../../../assets/fonts/feather-font/css/iconfont.css')}}">
+    <link rel="stylesheet" href="{{asset('../../../assets/vendors/flag-icon-css/css/flag-icon.min.css')}}">
     <!-- endinject -->
 
     <!-- Layout styles -->
-    <link rel="stylesheet" href="../../../assets/css/demo2/style.css">
+    <link rel="stylesheet" href="{{asset('../../../assets/css/demo2/style.css')}}">
     <!-- End layout styles -->
 
-    <link rel="shortcut icon" href="../../../assets/images/favicon.png" />
+    <link rel="shortcut icon" href="{{asset('../../../assets/images/favicon.png')}}" />
 </head>
 <body>
 <div class="main-wrapper">
@@ -51,7 +51,7 @@
                             </div>
                             <div class="col-md-8 ps-md-0">
                                 <div class="auth-form-wrapper px-4 py-5">
-                                    <a href="#" class="noble-ui-logo logo-light d-block mb-2">Noble<span>UI</span></a>
+                                    <a href="#" class="noble-ui-logo logo-light d-block mb-2">Briva<span> Digital</span></a>
                                     <h5 class="text-muted fw-normal mb-4">Welcome back! Log in to your account.</h5>
                                     <form class="forms-sample">
                                         <div class="mb-3">
@@ -69,7 +69,7 @@
                                             </label>
                                         </div>
                                         <div>
-                                            <a href="../../dashboard.html" class="btn btn-primary me-2 mb-2 mb-md-0 text-white">Login</a>
+                                            <a href="{{asset('../../dashboard.html')}}" class="btn btn-primary me-2 mb-2 mb-md-0 text-white">Login</a>
                                             <button type="button" class="btn btn-outline-primary btn-icon-text mb-2 mb-md-0">
                                                 <i class="btn-icon-prepend" data-feather="twitter"></i>
                                                 Login with twitter
@@ -89,15 +89,15 @@
 </div>
 
 <!-- core:js -->
-<script src="../../../assets/vendors/core/core.js"></script>
+<script src="{{asset('../../../assets/vendors/core/core.js')}}"></script>
 <!-- endinject -->
 
 <!-- Plugin js for this page -->
 <!-- End plugin js for this page -->
 
 <!-- inject:js -->
-<script src="../../../assets/vendors/feather-icons/feather.min.js"></script>
-<script src="../../../assets/js/template.js"></script>
+<script src="{{asset('../../../assets/vendors/feather-icons/feather.min.js')}}"></script>
+<script src="{{asset('../../../assets/js/template.js')}}"></script>
 <!-- endinject -->
 
 <!-- Custom js for this page -->
