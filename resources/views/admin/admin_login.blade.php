@@ -11,6 +11,14 @@
 
     <title>Admin Login Page</title>
 
+    <style type="text/css">
+        .auth-login-side-wrapper{
+            width: 100%;
+            height: 100%;
+            background-image: url("{{ asset('upload/login.png') }}");
+        }
+    </style>
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,7 +53,7 @@
                     <div class="card">
                         <div class="row">
                             <div class="col-md-4 pe-md-0">
-                                <div class="auth-side-wrapper">
+                                <div class="auth-login-side-wrapper">
 
                                 </div>
                             </div>
@@ -53,14 +61,16 @@
                                 <div class="auth-form-wrapper px-4 py-5">
                                     <a href="#" class="noble-ui-logo logo-light d-block mb-2">Briva<span> Digital</span></a>
                                     <h5 class="text-muted fw-normal mb-4">Welcome back! Log in to your account.</h5>
-                                    <form class="forms-sample">
+
+                                        <form class="forms-sample" method="POST" action="{{ route('login') }}">
+                                            @csrf
                                         <div class="mb-3">
-                                            <label for="userEmail" class="form-label">Email address</label>
-                                            <input type="email" class="form-control" id="userEmail" placeholder="Email">
+                                            <label for="userEmail" class="form-label">Email or Name or Phone</label>
+                                            <input type="text" class="form-control" id="login" name="login" placeholder="Email or Name or Phone">
                                         </div>
                                         <div class="mb-3">
-                                            <label for="userPassword" class="form-label">Password</label>
-                                            <input type="password" class="form-control" id="userPassword" autocomplete="current-password" placeholder="Password">
+                                            <label for="password" class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="password" name="password" autocomplete="current-password" placeholder="Password">
                                         </div>
                                         <div class="form-check mb-3">
                                             <input type="checkbox" class="form-check-input" id="authCheck">
@@ -69,14 +79,14 @@
                                             </label>
                                         </div>
                                         <div>
-                                            <a href="{{asset('../../dashboard.html')}}" class="btn btn-primary me-2 mb-2 mb-md-0 text-white">Login</a>
-                                            <button type="button" class="btn btn-outline-primary btn-icon-text mb-2 mb-md-0">
-                                                <i class="btn-icon-prepend" data-feather="twitter"></i>
-                                                Login with twitter
+                                            <button type="submit" class="btn btn-outline-primary btn-icon-text mb-2 mb-md-0">
+                                                Login
                                             </button>
                                         </div>
                                         <a href="register.html" class="d-block mt-3 text-muted">Not a user? Sign up</a>
                                     </form>
+
+
                                 </div>
                             </div>
                         </div>
