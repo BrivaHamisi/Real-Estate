@@ -76,14 +76,8 @@
                                     <input type="text" name="address" class="form-control" id="exampleInputUsername1" autocomplete="on" value="{{$profileData->address}}">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1" autocomplete="off" placeholder="Password">
-                                </div>
-                                <div class="form-check mb-3">
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                    <label class="form-check-label" for="exampleCheck1">
-                                        Remember me
-                                    </label>
+                                    <label for="exampleInputEmail1" class="form-label">Photo</label>
+                                    <input type="file" name="photo" class="form-control" id="formFile">
                                 </div>
                                 <button type="submit" class="btn btn-primary me-2">Submit</button>
                                 <button class="btn btn-secondary">Cancel</button>
