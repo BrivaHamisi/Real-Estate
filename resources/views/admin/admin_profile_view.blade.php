@@ -56,7 +56,7 @@
 
                             <h6 class="card-title">Update Admin Profile</h6>
 
-                            <form class="forms-sample">
+                            <form method="POST" action="{{ route('admin.profile.store') }}" class="forms-sample">
                                 @csrf
                                 <div class="mb-3">
                                     <label for="exampleInputUsername1" class="form-label">Username</label>
@@ -86,7 +86,7 @@
                                     <label for="exampleInputEmail1" class="form-label"></label>
                                     <img id="showImage" class="wd-80 rounded-circle" src="{{ (!empty($profileData->photo)) ? url('upload/admin_images/'.$profileData->photo) : url('upload/no_image.jpg') }}" alt="profile">
                                 </div>
-                                <button type="submit" class="btn btn-primary me-2">Submit</button>
+                                <button type="submit" class="btn btn-primary me-2">Save Changes</button>
                                 <button class="btn btn-secondary">Cancel</button>
                             </form>
                         </div>
