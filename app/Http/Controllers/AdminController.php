@@ -81,9 +81,25 @@ class AdminController extends Controller
             'old_password' => 'required',
             'new_password'=> 'required|confirmed',
         ]);
-        ///Match the Old Password
-        if (!Hash::check($request)){
 
+        //Match the old password
+        if (!Hash::check($request->old_paswword, auth::user()->password)){
+            $notification = array(
+                'message' => 'Old Password Does Not Match',
+                'alert-type' => 'error'
+            );
+            return back()->with($notification);
         }
+
+        //Update the New Password
+        User::whereId(auth()->user()->id)->update([
+            'password'=>Hash::make($request->new_password)
+        ]);
+        $notification = array(
+            'message' => 'Password Changed Successfully',
+            'alert-type' => 'success'
+        );
+        return back()->with($notification);
+
     }//End of Method
 }
