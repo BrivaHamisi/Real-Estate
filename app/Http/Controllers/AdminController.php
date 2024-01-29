@@ -83,7 +83,7 @@ class AdminController extends Controller
         ]);
 
         //Match the old password
-        if (!Hash::check($request->old_paswword, auth::user()->password)){
+        if (!Hash::check($request->old_password, auth::user()->password)){
             $notification = array(
                 'message' => 'Old Password Does Not Match',
                 'alert-type' => 'error'
